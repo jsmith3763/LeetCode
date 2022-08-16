@@ -3,19 +3,19 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function (nums, target) {
-    let returnnums = [];
-    let map = new Map();
-    for (let i = 0; i < nums.length; i++) {
-        let currentNum = nums[i];
-        let targetNum = target - nums[i];
-        if (map.has(targetNum)) {
-            returnnums.push(map.get(targetNum));
-            returnnums.push(i);
-            return returnnums;
-        }
-        map.set(currentNum, i);
-        
+var twoSum = function(nums, target) {
+  let numsToFind = {}
+
+  for (let p1 = 0; p1 < nums.length; p1++) {
+    let numToFind = target - nums[p1];
+    
+    if (numToFind in numsToFind) {
+      let returnArr = [];
+      returnArr.push(numsToFind[numToFind], p1);
+      return returnArr;
     }
-    return false;
+
+    numsToFind[nums[p1]] = p1
+  }
+  return null;
 }
