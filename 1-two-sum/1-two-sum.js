@@ -4,18 +4,18 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-  let numsToFind = {}
+  let numsObj = {}
 
-  for (let p1 = 0; p1 < nums.length; p1++) {
-    let numToFind = target - nums[p1];
+  for (let p = 0; p < nums.length; p++) {
+    let currentVal = numsObj[nums[p]]
     
-    if (numToFind in numsToFind) {
-      let returnArr = [];
-      returnArr.push(numsToFind[numToFind], p1);
-      return returnArr;
+    if (currentVal >= 0) {
+      return [currentVal, p]
+    } else {
+      let numToFind = target - nums[p]
+      numsObj[numToFind] = p;
     }
-
-    numsToFind[nums[p1]] = p1
   }
   return null;
 }
+
