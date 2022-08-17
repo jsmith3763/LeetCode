@@ -48,3 +48,5 @@ var backspaceCompare = function(S, T) {
     
     return true;
 };
+
+console.log(backspaceCompare(string1, string2));
