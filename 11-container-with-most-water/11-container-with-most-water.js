@@ -12,7 +12,7 @@ const maxArea = (arr) => {
     let area = height * width
     maxArea = Math.max(maxArea, area)
 
-    if(height == arr[p1]) {
+    if(arr[p1] <= arr[p2]) {
       p1++
     }else {
       p2--
