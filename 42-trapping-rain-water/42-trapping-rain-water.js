@@ -2,6 +2,7 @@
  * @param {number[]} height
  * @return {number}
  */
+//Two pointer strategy
 const trap = function(height) {
 
   let left = 0, right = height.length - 1, totalWater = 0, maxLeft = 0, maxRight = 0;
