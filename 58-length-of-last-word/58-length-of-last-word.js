@@ -12,13 +12,5 @@ var lengthOfLastWord = function(s) {
         count++
     }
     
-//     for(rightPointer; rightPointer >= 0; rightPointer--) {
-//         if(trimmedString[rightPointer] == ' ') {
-//             break;
-//         }
-        
-//         count++
-//     }
-    
     return count;
 };
