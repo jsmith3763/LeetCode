@@ -7,13 +7,18 @@ var lengthOfLastWord = function(s) {
     let rightPointer = trimmedString.length - 1;
     let count = 0;
     
-    for(rightPointer; rightPointer >= 0; rightPointer--) {
-        if(trimmedString[rightPointer] == ' ') {
-            break;
-        }
-        
+    while(rightPointer >= 0 && trimmedString[rightPointer] != ' ') {
+        rightPointer--
         count++
     }
+    
+//     for(rightPointer; rightPointer >= 0; rightPointer--) {
+//         if(trimmedString[rightPointer] == ' ') {
+//             break;
+//         }
+        
+//         count++
+//     }
     
     return count;
 };
