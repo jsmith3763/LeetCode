@@ -9,6 +9,7 @@ var singleNumber = function(nums) {
     
     let result = 0;
     
+    //XOR of two same bits returns 0
     nums.forEach(element => {
         result = result ^ element
     })
